@@ -12,7 +12,7 @@ install_repositories() {
   cat repositories.txt |grep 'deb'|while read line; do
     if ! echo $line | egrep -q '^ *#'
     then
-        sudo add-apt-repository '$line'
+        sudo $line
         sudo apt-get update
     fi
   done
@@ -31,7 +31,7 @@ install_packages() {
 
 if [ $# -eq 0 ]
     then
-        echo "Here is your Options:\nlist_repositories \ninstall_repositories \nlist_packages \nInstall_packages" 
+        echo "Here is your Options:\nlist_repositories \ninstall_repositories \nlist_packages \ninstall_packages" 
     else
         $1
     fi
