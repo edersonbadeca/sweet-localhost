@@ -8,7 +8,7 @@ Ubuntu packages repositories backup tools
 ```
 # backup packages
 ```
-./manage.sh list_repositories > packages.txt
+./manage.sh list_packages > packages.txt
 ```
 # install repositories
 ```
